@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'starter.accordion',
-    'starter.actionsheet', 'starter.pullrefresh'])
+    'starter.actionsheet', 'starter.pullrefresh', 'starter.editableList'])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -65,6 +65,16 @@ angular.module('starter', ['ionic', 'starter.accordion',
                     'tab-action-sheet': {
                         templateUrl: 'templates/tab-action-sheet.html',
                         controller: 'ActionSheetCtrl'
+                    }
+                }
+            })
+
+            .state('tab.editable_list', {
+                url: '/editable_list',
+                views: {
+                    'tab-editable-list': {
+                        templateUrl: 'templates/tab-editable-list.html',
+                        controller: 'EditableListCtrl'
                     }
                 }
             });

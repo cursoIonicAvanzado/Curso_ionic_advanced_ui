@@ -1,0 +1,38 @@
+<ion-view view-title="Editable List">
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button button-icon icon ion-ios-minus-outline"
+                    ng-click="toggleDeleteButtons()"></button>
+        </div>
+        <h1 class="title">Ionic Delete/Option Buttons</h1>
+        <div class="buttons">
+            <button class="button"
+                    ng-click="toggleReorderButtons()">
+                Reorder
+            </button>
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="padding">
+        <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+            <ion-item ng-repeat="item in items" item="item"
+                      href="#/item/{{item.id}}" class="item-remove-animate">
+                Este es el elemento {{ item.id }}
+                <ion-delete-button class="ion-minus-circled"
+                                   ng-click="onItemDelete(item)">
+                </ion-delete-button>
+                <ion-option-button class="button-assertive"
+                                   ng-click="edit(item)">
+                    Edit
+                </ion-option-button>
+                <ion-option-button class="button-calm"
+                                   ng-click="share(item)">
+                    Share
+                </ion-option-button>
+                <ion-reorder-button class="ion-navicon"
+                                    on-reorder="moveItem(item, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
