@@ -1,0 +1,25 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+    <ion-tab title="Accordion" icon-off="ion-levels" icon-on="ion-levels"
+             href="#/tab/accordion">
+        <ion-nav-view name="tab-accordion"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Pull refresh"
+             icon-off="ion-chevron-down" icon-on="ion-chevron-down"
+             href="#/tab/pull_refresh">
+        <ion-nav-view name="tab-pull-refresh"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Action sheet" icon-off="ion-videocamera"
+             icon-on="ion-videocamera"
+             href="#/tab/action_sheet">
+        <ion-nav-view name="tab-action-sheet"></ion-nav-view>
+    </ion-tab>
+
+</ion-tabs>
